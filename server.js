@@ -14,7 +14,7 @@ app.use(
   })
 );
 
-// app.use(cors({ origin: "https://word-count-frontend.vercel.app/",credentials:true }));
+// app.use(cors({ origin: "http://localhost:3000",credentials:true }));
 
 const port = 5001;
 app.use(express.json());
