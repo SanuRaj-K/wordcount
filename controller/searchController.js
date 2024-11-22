@@ -13,7 +13,7 @@ const seachURL = async (req, res) => {
       searchId: id,
       mediaLinks: mediaLinks,
       webLinks: webLinks,
-      domainName: domainName,
+      domainName: domainName, 
     });
     const isDomainAlreadySearched = await searchModel.findOne({
       domainName: domainName,

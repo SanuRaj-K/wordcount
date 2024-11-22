@@ -10,6 +10,8 @@ app.use(cors({ origin: "https://word-count-frontend.vercel.app/" }));
 const port = 5001;
 app.use(express.json());
 app.use("/search", searchRoute);
+console.log(process.env.MONGODB_CONNECTION_STRING);
+
 mongoose
   .connect(process.env.MONGODB_CONNECTION_STRING)
   .then(() => console.log("connected"))
