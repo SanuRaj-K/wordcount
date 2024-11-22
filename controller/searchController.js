@@ -20,7 +20,7 @@ const seachURL = async (req, res) => {
     });
     if (isDomainAlreadySearched) {
       res.status(409).send("This domain is already searched");
-    } else {
+    } else {                                   
       const savedSearch = await searchItem.save();
       res.status(200).send(savedSearch);
     }
