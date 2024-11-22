@@ -1,17 +1,15 @@
 const mongoose = require("mongoose");
 
-const serachSchema = new mongoose.Schema({
+const searchSchema = new mongoose.Schema({
   searchId: {
     type: String,
-    required: true,
   },
   domainName: {
     type: String,
     required: true,
   },
   wordCount: {
-    type: String,
-    required: true,
+    type: Number,
   },
   favourite: {
     type: Boolean,
@@ -25,5 +23,5 @@ const serachSchema = new mongoose.Schema({
   },
 });
 
-const searchModel = mongoose.model("Search", serachSchema);
+const searchModel = mongoose.model("Search", searchSchema);
 module.exports = searchModel;
